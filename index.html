@@ -1,0 +1,10 @@
+<div id="output"></div>
+
+<script>
+fetch("http://localhost:5000/testww")
+  .then(res => res.json())
+  .then(data => {
+    document.getElementById("output").innerHTML =
+      data.map(row => `<p>${JSON.stringify(row)}</p>`).join("");
+  });
+</script>   
